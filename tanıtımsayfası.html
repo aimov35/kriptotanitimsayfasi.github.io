@@ -16,9 +16,17 @@
         .div1{
             width: auto;
             height: max-content;
-            background-color: #888;
             text-align: center;
+            background-color: #888;
             color: white;
+        }
+        .div2{
+            
+            background-color: #888;
+            color: white;
+            width: 100%;
+            height: max-content;
+            
         }
         .button{
             background-color: aqua;
@@ -29,6 +37,17 @@
         }
         h5{
             color: blue;
+            font-size: 18px;
+ 
+        }
+        .imgwh{
+            width: 600px;
+            height: 400px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        p{
+            font-size: 20px;
         }
     </style>
     <body>
@@ -45,19 +64,22 @@
         <a href="https://aimov35.github.io/kriptoborsasitanitimi1/">https://aimov35.github.io/kriptoborsasi.github.io/</a> </p>
         <a href="https://aimov35.github.io/kriptoborsasitanitimi1/" ><input  class="button" type="button" value="Proje Sayfasın Geçmek İçin Tıklayın" ></a>
         </div>
-        <div class="div1">
-
-            <h2>PHP Kurulumu ve Çalıştırma</h2>
+        <div class="div2">
+         <hr>
+            <h2 style="text-align: center;">PHP Kurulumu ve Çalıştırma</h2>
             <p>Kendi bilgisayarımızda çalışmalar yapabilmek için İçerisinde 
             Apache, Php ve MySQL programlarını barındıran Paket programlarından bir tanesini kurmak gerekiyor ben macOS işletim sistemi kullandığım için MAMMP isimli
             programı tercih ettim eğer windows kullanıcısıysanız XAMPP da kullanabilirsiniz.</p>
-            <img src="mamp.png">
-            <img src="mampport.png">
-            <p>Buradan port ayarlarımızı yapıp vs code'dan launch.json klasöründeki port ayarlarıyla aynı olduğuna emin oluyoruz. </p>
-            <img src="forport.png">
-
+            <img class="imgwh"src="mamp.png">
+            <img class="imgwh"src="mampport.png">
+                <div >
+            <p style="float: right; margin-top: 150px;">Buradan port ayarlarımızı yapıp vs code'dan launch.json klasöründeki port ayarlarıyla <br> aynı olduğuna emin oluyoruz.<br>
+            Eğer tarayıcımızı google chrome yapmak istiyorsak type kısmına chrome yazıyoruz. </p>
+            <img class="imgwh"src="forport.png">
         </div>
 
+        </div>
+       <hr>
         <div class="div1">
             <h2>Nasıl Çalıştırılır Videosu</h2>
 
@@ -65,25 +87,28 @@
                 <source type="video/mp4" src="video.mov">
             </video>
         </div>
-        <div class="div1">
-            <h2>Php ile servere bağlanabilmek için bir php dosyası açıp aşağıdaki kodları yazıyoruz.</h2>
-            <img src="kkphp.png">
-            <p>Servere bağlantımızın başarılı olup olmadığını if koşuluyla kontrol ediyoruz.</p>
+        <hr>
+        <div class="div2">
+            <h2 style="text-align: center;">Php ile servere bağlanabilmek için bir php dosyası açıp aşağıdaki kodları yazıyoruz.</h2>
+            <img class="imgwh"src="kkphp.png">
+            <p style="float: right; margin-top: 150px; margin-right: 130px;">Servere bağlantımızın başarılı olup olmadığını if koşuluyla kontrol ediyoruz.<br>Eğer bağlantıda
+            hata verirse consola 'connection error' yazdırıyoruz. </p>
         </div>
+          <hr>
+        <div class="div2">
 
-        <div class="div1">
-
-            <h2>PHP ile Giriş işlemi</h2>
-            <p>Servere bağlandıktan sonra sitemizin anasayfasıyla karşılaşıyoruz.Buradan giriş yapmak için sağ üstteki "Giriş Yap"
+            <h2 style="text-align: center;">PHP ile Giriş işlemi</h2>
+            <p style="float: right; margin-top: 150px;">Servere bağlandıktan sonra sitemizin anasayfasıyla karşılaşıyoruz.<br>Buradan giriş yapmak için sağ üstteki "Giriş Yap"
                 butonun tıkladığımızda giriş formunu görüyoruz. </p>
-                <img style="width:800px; height:500px;" src="anasayfa.png">
-                <p>Ardından bizi login sayfamız karşılıyor.</p>
-                <img style="width:800px; height:500px;" src="login.png">
-
-               <h3>Başarılı bir şekilde giriş yapabilmek için php kodlarımızı kullanıp serverlerla eşleşme yapıyoruz.</h3>
-               <img src="phplog.png">
-
-               <h3>Kodların Açıklaması</h3>
+                <img style="width:600px; height:500px;" src="anasayfa.png">
+                <p style="float: right; margin-top: 150px; margin-right: 480px;">Ardından bizi login sayfamız karşılıyor.</p>
+                <img style="width: 600px; height:500px;" src="login.png">
+               </div>
+  <hr>
+               <div class="div2">
+               <span style="float: right;" >
+               <h3 style="margin-top: 50px;">Başarılı bir şekilde giriş yapabilmek için php kodlarımızı kullanıp serverlerla eşleşme yapıyoruz.</h3>
+               <h3 style="margin-top: 100px; text-align:center;">Kodların Açıklaması</h3>
                <p><h5>session_start();</h5> ile kodları başlatıp <h5>include("inc/vt.php");</h5> ile veri tabanına bağlanıyoruz.</p>
                <p>Eğer mevcut oturum varsa if içinde <h5>($_SESSION["Oturum"]</h5> komutu yardımıyla kontrolü yapıp  <h5>header("location:index.php");</h5>
                 komutuyla anasayfamıza yönlendiriyoruz.
@@ -91,56 +116,68 @@
                <p>Kullanıcı adlarını çekmek için <h5>$sorgu = $baglanti->query("select kadi from kullanicilar");</h5> sorgusunu kullanıyoruz</p>
                <p>While döngüsü yardımıyla kullanıcı isimlerini veritabanından tek tek kontrol ettiriyoruz.</p>
                <p>Sonrasında açtığımız if komutuyla kullanıcı adı ve parola doldurulmuşmu kontrolnü yapıyoruz.</p>
-
-        </div>
-        <div class="div1">
-            <h2>Anasayfayı Oluştururken Kullandığım Araçlar</h2>
-             <p>İlk olarak sayfama bir navbar yapıp sol tarafına logo yerleştirdim. Merkez kısmına anasayfa,alım ve satım sayfasına yönlendirmek
-                üzere 3 adet link koydum.Giriş ve kayıt sekmesine erişebilmesi için sağ köşeye iki adet buton yapıp tüm bunları css ile düzenledim.
+               
+           </span>
+           <img style="width: 600px; height:1000px; "src="phplog.png">
+                 </div>
+        
+        <hr>
+        <div class="div2">
+            <h2 style="text-align: center;">Anasayfayı Oluştururken Kullandığım Araçlar</h2>
+            
+              <img style="width: 650px; height:500px;" src="navbar.png"> 
+               <p style="float: right; font-size: 18px; margin-top: 150px;">İlk olarak sayfama bir navbar yapıp sol tarafına logo yerleştirdim.
+                 <br>Merkez kısmına anasayfa,alım ve satım sayfasına yönlendirmek
+                üzere 3 adet link koydum.<br>
+                Giriş ve kayıt sekmesine erişebilmesi için sağ köşeye iki adet buton yapıp tüm bunları css ile düzenledim.
              </p>
-              <img style="width:800px; height:500px;"  src="navbar.png">
-              <img style="width: 1240px; height:100px;" src="resimnavbar.png">
+             <p style="text-align: center;">Sonuç Böyle Görünücek:</p>
+              <img style="width: 1240px; height:100px; margin-left: 70px;" src="resimnavbar.png">
         </div>
 
-         <div class="div1">
-            <H2>Kripto Varlıkların Anlık değerlerini Almak</H2>
-            <p>Kripto varlıkların anlık değişen değerleniri almak için bir api kullanıp iframe etiketi ile siteme verilerini çektim.
-                <h5>  iframe src="https://www.genelpara.com/embed/?symbol=kripto&kripto=BTC,ETH,XRP,BCH,LTC&stil=stil-6&renk=beyaz"
-                    frameborder="0" width="1440" height="250"></iframe
-                   </h5>
-            </p>
-            <img style="width: 1200px; height: 400px;" src="coin.png">
+         <div class="div2">
+            <h2 style="text-align: center;">Kripto Varlıkların Anlık değerlerini Almak</h2>
+            <p style="text-align: center;">Kripto varlıkların anlık değişen değerleniri almak için bir api kullanıp iframe etiketi ile siteme verilerini çektim.
+               
+            </p> 
+            <h5 style="text-align: center; margin-right:100px; font-size: 16px;" >  iframe src="https://www.genelpara.com/embed/?symbol=kripto&kripto=BTC,ETH,XRP,BCH,LTC&stil=stil-6&renk=beyaz"
+                    frameborder="0" width="1440" height="250">/iframe</h5>
+                   <img style="width: 1200px; height: 400px; margin-left: 120px;" src="coin.png">
+              </div>
 
-         </div>
+       
+             <hr>
+         <div class="div2">
 
-         <div class="div1">
+            <h2 style="text-align: center;">JavaScript Kullanarak Bilgi Bölümü </h2>
+             
+                     
+             <h5 style="float: right; margin-top: 100px; margin-right: 180px; font-size: 16px;">
 
-            <h2>JavaScript Kullanarak Bilgi Bölümü </h2>
-             <h5>
-                function whichTransitionEvent(){
-                    var t,
-                        el = document.createElement("fakeelement");
+                function whichTransitionEvent(){<br>
+                    var t,<br>
+                        el = document.createElement("fakeelement");<br>
                   
-                    var transitions = {
-                      "transition"      : "transitionend",
-                      "OTransition"     : "oTransitionEnd",
-                      "MozTransition"   : "transitionend",
-                      "WebkitTransition": "webkitTransitionEnd"
-                    }
+                    var transitions = {<br>
+                      "transition"      : "transitionend",<br>
+                      "OTransition"     : "oTransitionEnd",<br>
+                      "MozTransition"   : "transitionend",<br>
+                      "WebkitTransition": "webkitTransitionEnd"<br>
+                    }<br>
                   
-                    for (t in transitions){
-                      if (el.style[t] !== undefined){
-                        return transitions[t];
-                      }
-                    }
-                  }
+                    for (t in transitions){<br>
+                      if (el.style[t] !== undefined){<br>
+                        return transitions[t];<br>
+                      }<br>
+                    }<br>
+                  }<br>
                   
                   
              </h5>
-             <p>JavaScript kodları ve aşağıdaki html kodlarını kullanıp hareketli bir card tasarımı yaptım.</p>
-             <img  style="width: 1000px; height: 400px;" src="card.png">
-             <p>GÖRÜNÜM:</p>
-             <img style="width: 1000px; height:600px;" src="info.png">
+             <h4 style="float:right; font-size: 16px;">JavaScript kodları ve aşağıdaki html kodlarını kullanıp hareketli bir card tasarımı yaptım.</h4>
+             <img style="width: 800px; height:400px;" src="card.png">
+             <p style="text-align: center; font-size:20px">GÖRÜNÜM:</p>
+             <img style="width: 1000px; height:600px; margin-left: 200px;" src="info.png">
         
          </div>
     </body>
